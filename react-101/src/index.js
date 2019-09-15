@@ -7,11 +7,11 @@ import * as serviceWorker from './serviceWorker'
 // import Counter from './components/Counter'
 // import Input from './components/Input'
 // import LoginForm from './components/LoginForm'
-import UserPage from "./pages/UserPage";
+import UsersPage from './pages/UsersPage'
 
 // const menuItems = [{ title: 'Facebook', link: 'https://facebook.com' }, { title: 'Twitter', link: 'https://twitter.com' }, { title: 'Google', link: 'https://google.com' }]
 
-ReactDOM.render(<UserPage/>, document.getElementById('root'))
+ReactDOM.render(<UsersPage />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
