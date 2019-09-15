@@ -1,17 +1,16 @@
 import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import UsersPage from './pages/UsersPage'
-import HomePage from './pages/HomePage'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={HomePage}/>
-        <Route path="/users" component={UsersPage}/>
-      </Switch>
-    </BrowserRouter>
-  )
-}
+import HomePage from './pages/HomePage'
+import UsersPage from './pages/UsersPage'
+
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={HomePage} exact />
+      <Route path="/users" component={UsersPage} />
+    </Switch>
+  </BrowserRouter>
+)
 
 export default App
