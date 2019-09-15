@@ -1,16 +1,31 @@
 import React from 'react'
-import Input from '../Input'
+import Input from './Input'
 
 const LoginForm = () => {
-  const [username, setUsername]
-  const handlesubmit = (e) => {
-    console.log('submit', e)
+  const [username, setUsername] = React.useState('')
+  const [password, setPassword] = React.useState('')
+  const handleSubmit = () => {
+    console.log('submit', { username, password })
   }
   return (
-    <form onSubmit={handlesubmit}>
-        <p>Username: <Input/></p>
-        <p>Password: <Input/></p>
-        <button type="button" onClick={}>Login</button>
+    <form>
+      <p>
+        Username: <Input
+          type="text"
+          value={username}
+          onChange={setUsername}
+        />
+      </p>
+      <p>
+        Password: <Input
+          type="password"
+          value={password}
+          onChange={setPassword}
+        />
+      </p>
+      <button type="button" onClick={handleSubmit}>Login</button>
     </form>
   )
 }
+
+export default LoginForm
