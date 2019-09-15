@@ -4,11 +4,12 @@ import './index.css'
 // import App from './App'
 // import ListMenu from './components/ListMenu'
 import * as serviceWorker from './serviceWorker'
-import Counter from './Counter'
+// import Counter from './Counter'
+import Input from "./Input";
 
 // const menuItems = [{ title: 'Facebook', link: 'https://facebook.com' }, { title: 'Twitter', link: 'https://twitter.com' }, { title: 'Google', link: 'https://google.com' }]
 
-ReactDOM.render(<Counter/>, document.getElementById('root'))
+ReactDOM.render(<Input/>, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

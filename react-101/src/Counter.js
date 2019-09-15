@@ -4,8 +4,13 @@ const Counter = (props) => {
     const [timer, setTimer] = React.useState(0);
     // const [state2, setState2] = React.useState('')
     React.useEffect(() => {
-        console.log('in use effect')
-    })
+        const interval = setInterval(() => {
+            setTimer(timer + 1)
+        }, 1000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [timer])
     const handleClick = () => {
         setTimer(timer + 1)
     }
