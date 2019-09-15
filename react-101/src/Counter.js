@@ -1,25 +1,25 @@
 import React from 'react'
 
 const Counter = (props) => {
-    const [timer, setTimer] = React.useState(0);
-    // const [state2, setState2] = React.useState('')
-    React.useEffect(() => {
-        const interval = setInterval(() => {
-            setTimer(timer + 1)
-        }, 1000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [timer])
-    const handleClick = () => {
-        setTimer(timer + 1)
+  const [timer, setTimer] = React.useState(0)
+  // const [state2, setState2] = React.useState('')
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setTimer(timer + 1)
+    }, 1000)
+    return () => {
+      clearInterval(interval)
     }
-    return (
-        <div>
+  }, [timer])
+  const handleClick = () => {
+    setTimer(timer + 1)
+  }
+  return (
+    <div>
             Timer: {timer}
-            <button type="button" onClick={handleClick}>Add</button>
-        </div>
-    )
+      <button type="button" onClick={handleClick}>Add</button>
+    </div>
+  )
 }
 
 // class Counter extends React.Component {
